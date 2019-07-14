@@ -1,0 +1,5 @@
+<mat-selection-list #tasksCheckList>
+  <mat-list-option (click)="tasksService.removeTask(i)" *ngFor="let task of tasksService.tasks; let i = index">
+    {{ task.name }}
+  </mat-list-option>
+</mat-selection-list>

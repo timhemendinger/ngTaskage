@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <span>NgTaskage</span>
+</mat-toolbar>
+
+<div class="app-container">
+
+<nav mat-tab-nav-bar>
+  <a mat-tab-link 
+     [routerLink]="['current']"
+     routerLinkActive #currentTab="routerLinkActive"
+     [active]="currentTab.isActive"
+    >Current</a>
+  <a mat-tab-link 
+     [routerLink]="['completed']"
+     routerLinkActive #completedTab="routerLinkActive"
+     [active]="completedTab.isActive"
+    >Completed</a>
+</nav>
+
+<router-outlet></router-outlet>
+
+</div>

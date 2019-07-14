@@ -1,0 +1,5 @@
+<mat-selection-list>
+  <mat-list-option *ngFor="let task of tasksService.completedTasks; let i = index">
+    {{ task.name }}
+  </mat-list-option>
+</mat-selection-list>

@@ -1,0 +1,10 @@
+<mat-card>
+
+<mat-form-field class="flex-grow-1">
+  <input matInput placeholder="New Task" type="text" [(ngModel)]="newTaskTitle">
+</mat-form-field>
+
+  <button mat-flat-button color="primary" (click)="onNewTaskAdded()">Add</button>
+
+
+</mat-card>
