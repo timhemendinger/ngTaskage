@@ -15,6 +15,7 @@ import { CurrentTasksComponent } from './tasks/current-tasks/current-tasks.compo
 import { CompletedTasksComponent } from './tasks/completed-tasks/completed-tasks.component';
 import { StatsComponent } from './tasks/stats/stats.component';
 import { MatToolbarModule } from '@angular/material/toolbar'; 
+import { HttpClientModule } from '@angular/common/http';
 
 const AppRoutes: Routes = [
   { path: 'current', component: CurrentTasksComponent },
@@ -22,7 +23,7 @@ const AppRoutes: Routes = [
 ]
 
 @NgModule({
-  imports: [FormsModule, BrowserModule, BrowserAnimationsModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatInputModule, MatExpansionModule, MatListModule, MatTabsModule, MatToolbarModule, RouterModule.forRoot(AppRoutes) ],
+  imports: [FormsModule, BrowserModule, BrowserAnimationsModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatInputModule, MatExpansionModule, MatListModule, MatTabsModule, MatToolbarModule, RouterModule.forRoot(AppRoutes), HttpClientModule ],
   declarations: [ AppComponent, TaskEditComponent, TaskListComponent, CurrentTasksComponent, CompletedTasksComponent, StatsComponent ],
   bootstrap:    [ AppComponent ],
   providers: [TasksService]

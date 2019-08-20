@@ -16,6 +16,7 @@ export class AppComponent  {
 
   ngOnInit() {
     this.router.navigate(['/current']);
+    this.tasksService.fetchTasks();
   }
 
 }
